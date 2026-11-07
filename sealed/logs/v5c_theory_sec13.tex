@@ -1,0 +1,178 @@
+%======================================================================
+\section{\texorpdfstring{$\ell=3$}{l=3}, the family \texorpdfstring{$D'=-20$}{D'=-20} (Phase 5c)}\label{sec:l3m20}
+
+Here $H_{-20}=X^2-1264000X-681472000$, $\mathcal O_{20}=\Z[\sqrt{-5}]$ (maximal, $h(-20)=2$), and
+$\ell=3$.  For a curve $E$ on the surface we write $\omega_E=(1+\pi_E)/2\in\Endp(E)$.  In this
+section $\Cl_f=\Cl(\Z[\sqp])$ (floor) and $\Cl_s=\Cl(\OK)$ (surface); both have odd order when
+$p\equiv3\pmod4$ \cite[Lemma~3]{CPV}, p.~5.  For $q\in\{3,5\}$ split in $K$, $\lf_q$ denotes a
+prime of $\Z[\sqp]$ above $q$ and $\lf_q^s=\lf_q\OK$.  $H_3^f=\langle[\lf_3]\rangle\le\Cl_f$ and
+$H_3^s=\langle[\lf_3^s]\rangle\le\Cl_s$ if $p\equiv2\pmod3$; both are trivial if $p\equiv1\pmod3$.
+
+\begin{lemma}[\tagX\,+\,\tagC, the family]\label{lem:20family}
+Let $p\notin\{2,3,5,13,17\}$.  $H_{-20}$ has two distinct roots $j_1\neq j_2$ in $\Fp$, and both are
+supersingular, iff $p\equiv11$ or $19\pmod{20}$.  Then $p\equiv3\pmod4$, and $j_i\notin\{0,1728\}$
+unless $p\in\{11,19\}$.
+\end{lemma}
+\begin{proof}
+$\mathrm{disc}(H_{-20})=2^{18}5^313^217^2$ and the roots generate $\Q(\sqrt5)$ \tagX{}
+(\texttt{v5c\_polys.sage}), so the roots lie in $\Fp$ iff $(\frac5p)=1$.  As in
+Lemma~\ref{lem:35family}, they are supersingular iff $p$ does not split in $\Q(\sqrt{-5})$, i.e.\
+$(\frac{-20}p)=(\frac{-1}p)(\frac5p)=-1$.  Together: $(\frac5p)=1$ and $p\equiv3\pmod4$, i.e.\
+$p\equiv11,19\pmod{20}$.  Finally $H_{-20}(0)=-2^{12}5^311^3$ and $H_{-20}(1728)=-2^{16}11^219^2$
+\tagX.
+\end{proof}
+
+\begin{lemma}[\tagN, the $3$-isogenies from CM; transfer of \S\ref{sec:l3m35}]\label{lem:20struct}
+Let $p>180$ with $p\equiv11,19\pmod{20}$.
+\begin{enumerate}[label=(\alph*)]
+\item There are $3$-isogenies $\varphi,\psi:E_1\to E_2^\circ$ with distinct kernels $C_1,C_2$ such
+  that $\beta=\widehat\varphi\psi$ satisfies $\beta^2-4\beta+9=0$.
+\item $\varphi$ is new and $\pi(C_1)=C_2$.
+\item $t=\tr(\widehat\varphi\varphi')=\pm4$, so $\{\deg(\varphi+\varphi'),\deg(\varphi-\varphi')\}=\{10,2\}$.
+\item \textup{(partner root)} Every new $3$-isogeny from $E_1$ whose codomain has $j$-invariant in
+  $\Fp$ has kernel $C_1$ or $C_2$; so $j_1j_2$ is the only new $3$-edge at $j_1$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+The proofs of Lemma~\ref{lem:35cm} and Proposition~\ref{prop:35struct}(a),(b),(d) go through with
+$(-35,\omega,\ \omega^2-\omega+9)$ replaced by $(-20,\ 2+\sqrt{-5},\ x^2-4x+9)$.  The inputs change as
+follows.
+\begin{itemize}
+\item $3$ splits in $\mathcal O_{20}$: $\p=(3,\sqrt{-5}-1)$, $\bar\p=(3,\sqrt{-5}+1)$, and
+  $\p^2=(2+\sqrt{-5})$, since $2+\sqrt{-5}=3+(\sqrt{-5}-1)\in\p$, $N(2+\sqrt{-5})=9$ and
+  $(2+\sqrt{-5})/3\notin\mathcal O_{20}$.  $\p$ is not principal ($x^2+5y^2=3$ has no solution);
+  $h(-20)=2$, with reduced forms $(1,0,5)$, $(2,2,3)$ \tagX.  The CM construction then gives
+  $\widehat\lambda u\lambda'=[\overline{2+\sqrt{-5}}]$, so $\beta^2-4\beta+9=0$.  The model has good
+  reduction because $j_1\notin\{0,1728\}$ (Lemma~\ref{lem:20family}, $p>19$).
+\item Idempotent: $\beta^2-4\beta+9\equiv\beta^2-\beta\pmod3$, and $\beta/3$, $(\beta-1)/3$ have
+  traces $4/3$, $2/3\notin\Z$.  So $\beta$ acts on $E_1[3]$ as a rank-one idempotent, and
+  $\ker\beta\cap E_1[3]=C_2$.  \cite[Prop.~23]{BS} needs $p\ge36$.
+\item In (b): $\beta'=\beta^{(p)}$ has trace $4$ and norm $9$.  If $\Q(\beta')=\Q(\beta)$ then
+  $\beta'\in\{\beta,4-\beta\}$.  $\beta'=\beta$ would put an element of discriminant $-20$ in
+  $\Endp(E_1)\in\{\Z[\sqp],\OK\}$, impossible for $p>20$.  $4-\beta=\widehat\beta$ has kernel $C_1$
+  on $E_1[3]$, not $C_2$.  Otherwise Lemma~\ref{lem:kaneko} gives $4p\le20\cdot20$.
+\item In (c) and (d): if $\Q(\theta)\ne\Q(\beta)$, Lemma~\ref{lem:kaneko} gives
+  $4p\le20(36-t^2)\le720$, i.e.\ $p\le180$.  Otherwise $t^2-36=-20f^2$ forces $t=\pm4$, $f=1$.  The
+  elements of norm $9$ and trace $\pm4$ of $\mathcal O_{20}$ are $\pm(2\pm\sqrt{-5})$, i.e.\
+  $\pm\beta,\pm\widehat\beta$.
+\end{itemize}
+\end{proof}
+
+\begin{lemma}[\tagN, the degree-$2$ map is vertical]\label{lem:20vertical}
+In the situation of Lemma~\ref{lem:20struct}, let $\chi_2$ be the $\Fp$-rational map of degree $2$
+among $\varphi+\varphi'$ and $\tau(\varphi-\varphi')$ (Proposition~\ref{prop:G1}).  Then $\chi_2$
+joins a floor curve and a surface curve.  Consequently $E_1$ and $E_2^\circ$ lie on different levels.
+\end{lemma}
+\begin{proof}
+Choose $\varepsilon=\pm1$ with $6+\varepsilon t=2$, so $\chi_2$ is $\varphi+\varepsilon\varphi'$ (followed
+by $\tau$ if $\varepsilon=-1$; this does not change the kernel).  The element $\varepsilon\theta$ has
+trace $-4$ and degree $9$, so $s:=\varepsilon\theta+2\in\End(E_1)$ satisfies $s^2=-5$.  By
+Proposition~\ref{prop:G2}, $\theta^{(p)}=t-\theta$, hence $s^{(p)}=-s$, i.e.\ $\pi s=-s\pi$.  Also
+$\widehat\varphi\chi_2=3+\varepsilon\theta=1+s$ (up to $\tau$).
+
+\emph{The kernel.}  $C:=\ker\chi_2$ has order $2$, so $C\subseteq E_1[2]$ and $C\subseteq\ker(1+s)$.
+Since $(1+s)/2$ has norm $6/4\notin\Z$, $1+s$ is not zero on $E_1[2]$.  So $C=\ker(1+s)\cap E_1[2]$,
+and $s$ fixes $C$ pointwise ($sP=-P=P$).
+
+\emph{$E_1$ on the floor.}  A floor curve has exactly one $\Fp$-rational $2$-isogeny, and it
+ascends \cite[Thm.~2.7(2)]{DG}, p.~8.  So $\chi_2$ ascends.
+
+\emph{$E_1$ on the surface.}  Let $S=E_1$ and $\omega=\omega_S$.  For a subgroup $C\subset S[2]$ of
+order $2$ and $\chi:S\to S/C$, we claim $S/C$ is on the surface iff $\omega(C)\subseteq C$.
+\begin{itemize}
+\item If $\omega(C)\subseteq C$, then $\omega$ induces an endomorphism $\omega''$ of $S/C$ with
+  $\omega''\chi=\chi\omega$ \cite[Cor.~III.4.11]{Silverman}.  It is defined over $\Fp$, and
+  $2\omega''\chi=\chi(1+\pi)=(1+\pi_{S/C})\chi$, so $\omega''=(1+\pi_{S/C})/2$ and
+  $\Endp(S/C)\cong\OK$.
+\item Conversely, if $\omega'':=(1+\pi_{S/C})/2\in\End(S/C)$, then $2\omega''\chi=\chi(1+\pi)=2\chi\omega$.
+  So $\omega''\chi=\chi\omega$ ($\Hom$ is torsion-free), and $\chi(\omega C)=\omega''\chi(C)=0$.
+\end{itemize}
+Next, $s\omega=(1-\omega)s$, from $s(1+\pi)=(1-\pi)s$.
+
+If $p\equiv3\pmod8$, then $\omega^2-\omega+\frac{p+1}4=0$ with $\frac{p+1}4$ odd, so $\omega$ acts on
+$S[2]\cong\F_2^2$ with characteristic polynomial $x^2+x+1$, irreducible over $\F_2$: no line is
+$\omega$-stable.
+
+If $p\equiv7\pmod8$, then $\omega(\omega-1)=0$ on $S[2]$ and $\omega\not\equiv0,1$ (as $\omega/2$,
+$(\omega-1)/2$ have trace $\frac12,-\frac12$).  So the $\omega$-stable lines are
+$L_0=\ker\omega\cap S[2]$ and $L_1=\ker(1-\omega)\cap S[2]$, and $L_0\cap L_1=0$ as $\omega+(1-\omega)=1$.
+Since $s\omega=(1-\omega)s$, $s$ maps $L_0$ to $L_1$.  If $C=L_0$ then $C=sC\subseteq L_1$, so
+$C\subseteq L_0\cap L_1=0$, a contradiction; likewise $C\neq L_1$.
+
+In both cases $C$ is not $\omega$-stable, so $S/C$ is on the floor.  Hence $\chi_2$ descends.
+The codomain of $\chi_2$ is $E_2^\circ$ or $\tw E_2^\circ$, and $\tw$ preserves levels.
+\end{proof}
+
+\begin{lemma}[\tagN, twisting relations]\label{lem:20twist}
+In the situation of Lemma~\ref{lem:20struct}, let $X\in\{E_1,E_2^\circ\}$, with order
+$\mathcal O_X=\Endp(X)$.  Then $\tw X=[\lf_5^X]X$ for a prime $\lf_5^X$ of $\mathcal O_X$ above $5$.
+\end{lemma}
+\begin{proof}
+For $X=E_1$ take $s$ as in Lemma~\ref{lem:20vertical}.  For $X=E_2^\circ$ use $\theta_2=\varphi'\widehat\varphi$,
+which has the same trace (Proposition~\ref{prop:G2}), and $s_2=\varepsilon\theta_2+2$.  In both cases
+$s^2=-5$ and $\pi s=-s\pi$, so $\tau s:X\to\tw X$ is $\Fp$-rational of degree $5$
+(Lemma~\ref{lem:twist}(d)).  Since $(\frac{-p}5)=1$, Frobenius has two distinct eigenvalues on $X[5]$.
+The rational kernel is an eigenspace, i.e.\ $X[\lf]$ with $\lf=(5,\pi-\lambda)\mathcal O_X$,
+which is invertible since $5$ is prime to the conductor.  So $\tw X=[\lf]X$, as in
+Lemma~\ref{lem:L6}.
+\end{proof}
+
+\begin{theorem}[\tagN, Theorem A$_{20}$]\label{thm:A20}
+Let $p>180$ with $p\equiv11,19\pmod{20}$, and let $j_1\neq j_2$ be the roots of $H_{-20}$ in $\Fp$.
+Then one of $j_1,j_2$ is a floor vertex and the other a surface vertex.  The edge $j_1j_2$ is
+\emph{not} attaching (in $\Sp^\circ_3$, with the $1728$ gluing) iff
+\[p\equiv2\pmod3\quad\text{and}\quad[\lf_5]\in H_3^f=\langle[\lf_3]\rangle\ \text{ in }\Cl(\Z[\sqp]).\]
+In particular it attaches whenever $p\equiv1\pmod3$.
+\end{theorem}
+\begin{proof}
+Let $F$ and $S$ be the floor and surface endpoints (Lemma~\ref{lem:20vertical}).  Odd-degree
+$\Fp$-isogenies preserve the level, and $j=1728$ is the only $j$-invariant with classes on both
+levels.  So, as in Lemma~\ref{lem:odd-comp}(a), the component of $j(F)$ in $\Sp^\circ_3$ meets the
+surface only if it contains $1728$.  In that case it is the union of the floor component through
+$E_0^f:y^2=x^3+x$ and the surface component through $E_0^s:y^2=x^3-x$ (both self-twists,
+Lemma~\ref{lem:twist}(b); levels by Lemma~\ref{lem:basic}(c)).  Hence the edge is not attaching iff
+$F\in H_3^fE_0^f$ and $S\in H_3^sE_0^s$.
+
+Write $F=[a]E_0^f$.  By Lemma~\ref{lem:20twist} and \cite[Lemma~16]{CPV} (with $[b]=1$ for
+$E_0^f$), $a^2=[\lf_5^F]^{-1}$.  In a group of odd order, $a\in H\iff a^2\in H$ for every subgroup
+$H$.  So $F\in H_3^fE_0^f$ iff $[\lf_5^F]\in H_3^f$.  Likewise $S\in H_3^sE_0^s$ iff
+$[\lf_5^S]\in H_3^s$.  Membership does not depend on which prime above $5$ is taken, since
+$[\bar\lf]=[\lf]^{-1}$.
+
+The map $\Cl_f\to\Cl_s$, $[\mathfrak a]\mapsto[\mathfrak a\OK]$, is a homomorphism.  It maps $H_3^f$
+onto $H_3^s$ and primes above $5$ to primes above $5$.  So the floor condition implies the surface
+condition, and the edge is non-attaching iff $[\lf_5]\in H_3^f$.  If $p\equiv1\pmod3$ then
+$H_3^f=1$, and $[\lf_5]=1$ would need $5=x^2+py^2$, which is impossible for $p>5$.
+\end{proof}
+
+\begin{theorem}[\tagN, Corollary C$_{20}$]\label{thm:C20}
+In the situation of Theorem~\ref{thm:A20}, suppose the edge is not attaching.  Write
+$[\lf_5]=[\lf_3]^{e}$ with $o_f=|H_3^f|$ and $o_s=|H_3^s|$ (both odd), and let $\|x\|_o$ be the
+distance of $x$ to $0$ in $\Z/o$.  Then
+\[d_{\Sp^\circ_3}(j_1,j_2)=\bigl\|\tfrac e2\bigr\|_{o_f}+\bigl\|\tfrac e2\bigr\|_{o_s},\]
+where $\frac e2$ is computed modulo the odd number $o$.  Moreover $5\cdot3^{m}\ge p$ with
+$m=\|e\|_{o_f}$.  Hence the edge attaches whenever $5\cdot3^{\lfloor o_f/2\rfloor}<p$.
+\end{theorem}
+\begin{proof}
+A path from the floor vertex $j(F)$ to the surface vertex $j(S)$ in $\Sp^\circ_3$ passes through
+$1728$.  By Lemma~\ref{lem:odd-comp}(b), with $\tw E_0^f=E_0^f$, the floor distance from $j(F)$ to
+$1728$ is $\|x\|_{o_f}$, where $F=[\lf_3]^{x}E_0^f$.  The same argument works on the surface
+(odd-degree isogenies are horizontal there too, and the proof of Lemma~\ref{lem:odd-comp}(b)
+uses nothing else).  From $a^2=[\lf_5]^{\mp1}$ we get $x\equiv\mp e/2\pmod{o_f}$, and
+$\|\cdot\|$ is symmetric; the image of $[\lf_3]$ in $\Cl_s$ has order $o_s$ and the same exponent
+relation holds modulo $o_s$.  For the bound: $\lf_5\lf_3'^{\,m}$ is principal in $\Z[\sqp]$ for a
+suitable prime $\lf_3'$ above $3$, generated by some $u+v\sqp$ with norm $5\cdot3^m$.  This is not
+a square, so $v\neq0$ and $5\cdot3^m\ge p$.
+\end{proof}
+
+\begin{remark}
+In contrast to Theorem~\ref{thm:A3}, the obstruction here is entirely the $1728$ gluing.  A
+level-changing edge can only fail to attach if both of its endpoints lie in the (glued)
+$1728$-components.  Theorem~\ref{thm:A20} says exactly when this happens.  The data quoted in the Phase~5 brief (all $756$
+primes below $6\cdot10^4$ attaching) are not ours, and we do not know whether they used the gluing.
+Our own verification is in \texttt{REPORT.md}.
+\end{remark}
+
+\emph{Exceptional primes.}  The hypothesis $p>180$ is used only for the Kaneko bounds in
+Lemma~\ref{lem:20struct}.  The family primes $p\le180$ are
+$11,19,31,59,71,79,131,139,151,179$.  They are checked by computation.

@@ -1,0 +1,6 @@
+Phase 5c prediction manifest (l = 3, D' = -20). Created 2026-09-29T12:21:45Z, before any Phase 5c verification (ground-truth) run.
+fc095745d1db83dd1e7ba8f30640f06dc49f067899411ac2ac369960b0957b31  logs/v5c_predictions.csv
+22513b3abe1bd67f7f8a483a0366edf8079a358d6709f041891724b7ddddfb6e  logs/v5c_primes.txt
+ebc8cdaef3bb160c6dcb8a2dcc1f6ca67abfc7bcdb5a6a8144e2c15eaa4da48f  v5c_predict.sage
+4b2f8445c794213c3cfa4d3bc5ef62ea8c7fd105e592fa8afa4830e262f4df9e  v5c_select.py
+83f447062e0f2aee157b371b6fb2de663fcc1d8dc621669619983231d296ebea  logs/v5c_theory_sec13.tex

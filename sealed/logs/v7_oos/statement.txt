@@ -1,0 +1,26 @@
+Phase 7 sealed out-of-sample test -- what is predicted (written 2026-09-29/30, before any computation on these primes).
+
+Primes: logs/v7_oos/primes_<l>.txt, l in {3,5,7,11,13}, 40 each (v7_oos_select.sage, seed 7202609), all p > 4 l^4.
+Families: every distinct-vertex family of Res_l (logs/v7_odd_families.txt: t odd; logs/v7_even_families.txt: t even).
+
+Predictions (class-group data only): per (p, l, D'): the number of bridges (new l-edges between F_p-roots of H_D') and the
+sorted multiset of their attachment outcomes, 'A' (attaching, with the j = 1728 gluing) or 'N<k>' (not attaching, spine
+distance k between the endpoints).
+
+(1) p = 3 (mod 4) -- Theorem A_all (proof.pdf Part II, Section "general theorem"), via v7_predict_all.sage:
+    roots of H_D' = curves X with a cyclic rational walk X -> iota X of degree m0 (optimal-order rule: D' odd -> floor;
+    D' even -> not (floor and m0 = 3 mod 4)); partner of X = the unique root M with M in R_{e+}(X), iota M in R_{e-}(X)
+    (or +/- swapped); attachment and k from the positions (Lemma 12.5, Prop 15.1).  Status: PROVED whenever the partner is
+    unique (the script flags non-uniqueness); the in-sample data showed no flags above 4 l^4.
+(2) p = 1 (mod 4) -- Conjecture A_1mod4, via v7_predict_all.sage (predict_1mod4): bridges <-> pairs of primitive odd ideals
+    (norms e+-_odd, each up to conjugation) with 2-parts t^{v2(e+-)} (none if some v2(e) > 1), existing iff all odd primes of
+    e+ e- split and the class [a+ a- t^{c+ + c-}] is a non-square; each pattern counted mu times (mu = 1 if D' odd or
+    m0 = 3 mod 4, else 2) if both e+ and e- have an odd prime factor, mu/2 times otherwise; attach iff [a+ t^{c+}] and
+    [a- t^{c-}] are not in H_l.  Status: CONJECTURE.  POST HOC: the multiplicity rule mu was read off the l = 11 even-family
+    exploration (p = 1 mod 4, 1600 < p < 5000); it was then confirmed without change on the l = 5, 7, 13 explorations.
+(3) Odd-t families, all p: Theorem A_odd (p = 3 mod 4; Conjecture A_odd' for p = 1 mod 4) via v7b_predict.sage, as a second,
+    independent predictor.
+
+Ground truth (to be run only after the manifest's OpenTimestamps proof is confirmed in a mined Bitcoin block):
+v7b_ground.sage (from-scratch spines: Sage isogenies, Phi_l multiplicities, the 1728 gluing; no class groups).
+Comparison: exact equality of n_bridges and of the multiset, per (p, family).

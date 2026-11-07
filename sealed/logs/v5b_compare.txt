@@ -1,0 +1,45 @@
+v5b_compare.py run at 2026-09-29T12:19:12Z
+manifest SHA-256 : 784c1bbea378e0177ac6abb0f502079ae91dd2653c9aa65e8f3fe33ae7155634
+expected (Gist)  : 784c1bbea378e0177ac6abb0f502079ae91dd2653c9aa65e8f3fe33ae7155634 -> OK
+  logs/v5b_predictions_inrange.csv  25b2efdf2d431ab1...  OK
+  logs/v5b_predictions_oos.csv  9e9a13c4a44ae599...  OK
+  logs/v5b_inrange_primes.txt  bd44c6a39c8f3292...  OK
+  logs/v5b_oos_primes.txt  2409fc6bf9a0204f...  OK
+  v5b_predict.sage  233d2ca99e2aafa9...  OK
+  v5b_select.py  ab4abe4eca212ffd...  OK
+Integrity check passed; predictions are read only after this line.
+
+primes: 19826 predicted, 19826 ground truth (200 out-of-sample)
+== in-range, hypotheses of Thm A3 (315 < p < 10^6): 19609 primes
+   observed attaching 11550, non-attaching 8059 (of which p = 1 mod 3: 0)
+   A3 attachment mismatches: 0
+   C3 k mismatches (non-attaching): 0;  bound q*3^k >= p and k >= log3(p/7) violated: 0
+   smallest log_3(7*3^k/p) over non-attaching primes: 0.0007 (p = 5099, k = 6)
+   forced-attachment predicted: 9862; of these not attaching: 0
+   o3 = |H3| vs measured 3-cycle length: 0 mismatches
+   Prop 12.4: partner root fails 0; not supersingular 0; endpoint not floor 0; deg-5 target not exactly one model of j2 0; parallel rational 3-edge j1-j2 0
+== out-of-sample (10^6 < p < 4*10^6): 200 primes
+   observed attaching 131, non-attaching 69 (of which p = 1 mod 3: 0)
+   A3 attachment mismatches: 0
+   C3 k mismatches (non-attaching): 0;  bound q*3^k >= p and k >= log3(p/7) violated: 0
+   smallest log_3(7*3^k/p) over non-attaching primes: 21.8771 (p = 1419239, k = 33)
+   forced-attachment predicted: 110; of these not attaching: 0
+   o3 = |H3| vs measured 3-cycle length: 0 mismatches
+   Prop 12.4: partner root fails 0; not supersingular 0; endpoint not floor 0; deg-5 target not exactly one model of j2 0; parallel rational 3-edge j1-j2 0
+
+== exceptional primes p <= 315 (outside the hypotheses): 17 primes
+   observed attaching 10, non-attaching 7 (of which p = 1 mod 3: 0)
+   A3 attachment mismatches: 0
+   C3 k mismatches (non-attaching): 0;  bound q*3^k >= p and k >= log3(p/7) violated: 0
+   smallest log_3(7*3^k/p) over non-attaching primes: 0.0597 (p = 59, k = 2)
+   forced-attachment predicted: 10; of these not attaching: 0
+   o3 = |H3| vs measured 3-cycle length: 0 mismatches
+   Prop 12.4: partner root fails 4; not supersingular 0; endpoint not floor 0; deg-5 target not exactly one model of j2 0; parallel rational 3-edge j1-j2 0
+
+== Theorem B3(a): 405 primes p = 3 mod 4, p < 30000 with a predicted position; 405 located
+   position mismatches (all p): 0; of these p > 315: 0
+   internal relation failures (a^2 = [l5 l7]^-1, E2 = [l7]a, twE2 = [l5]a, twE1 = a^-1, a = c^((h-1)/2), labelling consistency): 0 []
+   not located: []
+
+TOTAL mismatches in the hypothesis range (in-range + OOS + B3): 0
+Mismatches among the exceptional primes (outside hypotheses): 0

@@ -1,0 +1,28 @@
+PASS H_-15 = X^2 + 191025 X - 121287375
+PASS disc H_-15 = 3^6 5^3 7^4 13^2
+PASS H_-15(0) = -3^6 5^3 11^3
+PASS H_-15(1728) = 3^6 7^4 11^2
+PASS Table 1, l = 2: Res_l = -4 * product of H_D
+PASS Table 1, l = 3: Res_l = -27 * product of H_D
+PASS Table 1, l = 5: Res_l = -3125 * product of H_D
+PASS Table 1, l = 7: Res_l = -823543 * product of H_D
+PASS Remark 3.12: Res_2 = -4 X^2 (X-1728) (X+3375)^2 H_-15^2
+PASS Table 2, l = 3, D' = -35
+PASS Table 2, l = 5, D' = -51
+PASS Table 2, l = 5, D' = -91
+PASS Table 2, l = 7, D' = -115
+PASS Table 2, l = 7, D' = -187
+PASS l = 3, D' = -35: disc, H(0), H(1728), h = 2, t0, prime above 3 not principal
+PASS l = 3, D' = -20: disc, H(0), H(1728), h = 2, t0, prime above 3 not principal
+PASS l = 3, D' = -32: disc, H(0), H(1728), h = 2, t0, prime above 3 not principal
+PASS Res(H_-32, H_-8) = -2^6 5^6 7^4 13^2
+PASS root fields Q(sqrt 5), Q(sqrt 5), Q(sqrt 2)
+PASS Res_X(H_-35(X), Phi_2(X,Y)) = H_-140(Y)
+PASS Res(H_-35, H_-140) = 2^48 5^21 7^14 19^8 23^4 31^4 37^4 41^2 43^4 53^2 59^2 61^3 67^2
+PASS first five primes 71,119 mod 120 have <[p_2]> = Cl(O_K)
+PASS p = 431: h = 21, ord [p_2] = 7, [q_3], [q_5] not in <[p_2]>, roots {150, 189}
+PASS p = 6551: h = 117, ord [p_2] = 39, [q_3] = [p_2]^(+-15), [q_5] not in <[p_2]>, (479^2 + 25 p)/4 = 3 * 2^15
+PASS p = 327599: h = ord [p_2] = 963, ||e_3|| = 354, ||e_5|| = 14, positions {170, 184}, (81 + p)/4 = 5 * 2^14
+PASS sharpness: 7 * 3^6 = 5103 (p = 5099), 17 * 7^4 = 40817 (p = 40801)
+
+SUMMARY identities: 26 checks, failures: none

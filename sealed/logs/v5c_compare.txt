@@ -1,0 +1,36 @@
+v5c_compare.py run at 2026-09-29T12:32:57Z
+manifest SHA-256: 25787c3e599c619758e6078c6791314b4b55e1a2f057bb26013c6e05853c26d9 expected 25787c3e599c619758e6078c6791314b4b55e1a2f057bb26013c6e05853c26d9 -> OK
+  logs/v5c_predictions.csv OK
+  logs/v5c_primes.txt OK
+  v5c_predict.sage OK
+  v5c_select.py OK
+  logs/v5c_theory_sec13.tex OK
+Integrity check passed; predictions are read only after this line.
+
+== hypothesis range 180 < p < 10^6: 19686 primes
+   observed attaching 12510, non-attaching 7176 (p = 1 mod 3 among them: 0)
+   A20 attachment mismatches: 0;  C20 k mismatches: 0
+   forced attachment predicted: 9978, of which not attaching: 0
+   levels not {S,F}: 0;  rational 2-isogeny E1 -> model of j2 not exactly one or not to the level of E2: 0
+   missing rational 5-isogeny to own twist (E1 or E2): 0;  partner root fails: 0;  not supersingular: 0
+   o3f/o3s vs measured cycle lengths on the two levels: 0 mismatches
+
+== exceptional primes p <= 180: 10 primes
+   observed attaching 6, non-attaching 4 (p = 1 mod 3 among them: 0)
+   A20 attachment mismatches: 0;  C20 k mismatches: 0
+   forced attachment predicted: 6, of which not attaching: 0
+   levels not {S,F}: 2;  rational 2-isogeny E1 -> model of j2 not exactly one or not to the level of E2: 2
+   missing rational 5-isogeny to own twist (E1 or E2): 2;  partner root fails: 2;  not supersingular: 0
+   o3f/o3s vs measured cycle lengths on the two levels: 1 mismatches
+   p=11: j1=0 j2=1 levels FF attach=0 k=1 rat2->j2 1 (S) partner_ok=1 new3={1:2}
+   p=19: j1=7 j2=18 levels FF attach=1 k=- rat2->j2 1 (S) partner_ok=1 new3={18:2}
+   p=31: j1=2 j2=4 levels SF attach=1 k=- rat2->j2 1 (F) partner_ok=1 new3={4:2}
+   p=59: j1=15 j2=28 levels SF attach=0 k=3 rat2->j2 1 (F) partner_ok=1 new3={28:2}
+   p=71: j1=17 j2=41 levels SF attach=0 k=4 rat2->j2 1 (F) partner_ok=1 new3={41:2}
+   p=79: j1=15 j2=64 levels SF attach=1 k=- rat2->j2 1 (F) partner_ok=0 new3={17:2 64:2}
+   p=131: j1=50 j2=62 levels SF attach=0 k=7 rat2->j2 1 (F) partner_ok=1 new3={62:2}
+   p=139: j1=8 j2=65 levels FS attach=1 k=- rat2->j2 1 (S) partner_ok=0 new3={44:2 65:2}
+   p=151: j1=29 j2=101 levels FS attach=1 k=- rat2->j2 1 (S) partner_ok=1 new3={101:2}
+   p=179: j1=120 j2=140 levels SF attach=1 k=- rat2->j2 1 (F) partner_ok=1 new3={140:2}
+
+TOTAL mismatches, hypothesis range: 0;  exceptional: 0

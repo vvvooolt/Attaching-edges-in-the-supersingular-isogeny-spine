@@ -1,0 +1,7 @@
+Phase 5b prediction manifest (l = 3, D' = -35). Created 2026-09-29T08:16:47Z, before any Phase 5b verification run.
+25b2efdf2d431ab13a450c0ae99bbe700edbd2cd71c96aa85d3006bc06626b40  logs/v5b_predictions_inrange.csv
+9e9a13c4a44ae599693855fe99a824c39920ef4ae8ab1529d6a24a6853f454d5  logs/v5b_predictions_oos.csv
+bd44c6a39c8f329282b4e1a2fd41e6cd7861ab3a4ec648c408c522ac8b786c8e  logs/v5b_inrange_primes.txt
+2409fc6bf9a0204f192590aeb704b589bc2bcc173a8e1f731f2f040a72ff9ecb  logs/v5b_oos_primes.txt
+233d2ca99e2aafa9b197e6aaec0f557ccb9f5906305aa4a9e0af450b6aed1606  v5b_predict.sage
+ab4abe4eca212ffd6f88f9f3e957612fed0dac217cde6e1a21ad6ffd6ad121ee  v5b_select.py

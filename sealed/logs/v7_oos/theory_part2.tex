@@ -1,0 +1,262 @@
+%======================================================================
+\part*{Part II (Phase 7): attachment for every prime \texorpdfstring{$\ell$}{l}}
+\addcontentsline{toc}{section}{Part II (Phase 7): attachment for every prime $\ell$}
+
+\emph{All earlier results (Theorems A--C, A$_3$--C$_3$, A$_{20}$, C$_{20}$, A$_{\rm gen}$) are frozen; this part builds on them
+and changes none of them.}
+
+%======================================================================
+\section{Rational cyclic isogenies factor through prime steps (Stage 7a)}\label{sec:7a}
+
+\begin{proposition}[\tagN, factorisation]\label{prop:factor}
+Let $p>3$, let $E,E'$ be supersingular over $\Fp$, and let $\chi:E\to E'$ be an $\Fp$-rational cyclic isogeny of degree
+$n$ with $p\nmid n$.  Write $G=\ker\chi\cong\Z/n$.
+\begin{enumerate}[label=(\alph*)]
+\item For every $d\mid n$ the unique subgroup $G_d\le G$ of order $d$ is $\pi_E$-stable.  Hence for every ordering
+  $n=q_1q_2\cdots q_r$ into primes, $\chi$ is (up to an $\Fp$-isomorphism of the target) a composite
+  $\chi_r\circ\cdots\circ\chi_1$ of $\Fp$-rational isogenies $\chi_i$ of prime degree $q_i$, with
+  $\ker(\chi_i\circ\dots\circ\chi_1)=G_{q_1\cdots q_i}$.
+\item Each $\chi_i$ of odd prime degree $q$ is horizontal, and its kernel is $X[\lf]$ for the invertible ideal
+  $\lf=(q,\pi-\lambda)$ of the common order $\Endp$ of its source and target, where $\lambda$ is the eigenvalue of
+  Frobenius on the kernel.
+\item Each $\chi_i$ of degree $2$ is one of the moves of \cite[Thm.~2.7]{DG}, p.~8: for $p\equiv1\pmod4$ the unique rational
+  $2$-isogeny, which is horizontal with kernel $X[\mathfrak t]$, $\mathfrak t=(2,1+\sqp)$, and $[\mathfrak t]$ of order~$2$
+  (\cite[proof of Lemma~17]{CPV}, p.~13); for $p\equiv3\pmod4$ an ascending step (from the floor), a descending step
+  (from the surface), or, for $p\equiv7\pmod8$ only, a horizontal surface step with kernel $S[\p_2]$ or $S[\bar\p_2]$.
+\item Consequently, choosing the ordering ``all odd primes first'', $\chi=w\circ\chi_{\rm odd}$, where $\chi_{\rm odd}$ has
+  kernel $E[\mathfrak a]$ for a primitive invertible ideal $\mathfrak a$ of $\Endp(E)$ of norm $n_{\rm odd}$ (the odd part of
+  $n$), and $w$ is a non-backtracking walk of $v_2(n)$ rational $2$-isogeny moves.  The class $[\mathfrak a]$ and the walk
+  $w$ together determine $E'$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(a) $\pi_E$ is a group automorphism of $E(\Fpb)$, and $\pi_E(G)=G$ because $\chi$ is $\Fp$-rational
+(Lemma~\ref{lem:frobconj}(e) and the remark after it: $\ker\chi^{(p)}=\pi(\ker\chi)$).  So $\pi_E(G_d)$ is a subgroup of
+$G$ of order $d$, hence equals $G_d$.  A $\pi$-stable finite subgroup is the kernel of a separable $\Fp$-rational isogeny,
+unique up to $\Fp$-isomorphism of the target \cite[Lemma~6]{CSIDH}, p.~10.  The quotient maps
+$E/G_{d}\to E/G_{dq}$ (kernel $G_{dq}/G_d$, stable under the Frobenius of $E/G_d$ because the quotient map
+$E\to E/G_d$ commutes with Frobenius) are $\Fp$-rational of degree $q$.
+(b) The target of an odd-degree $\Fp$-isogeny has the same $\Fp$-endomorphism ring (Lemma~\ref{lem:basic}(f) for
+$p\equiv7\pmod8$; \cite[Thm.~2.7]{DG} in general).  Frobenius acts on $X[q]$ with eigenvalues the roots of $x^2+p$ mod $q$;
+a rational kernel of order $q$ is an eigenline.  The two eigenvalues $\pm\lambda$ are distinct ($q$ odd, $q\nmid p$), so the
+eigenline is $X[\lf]$ with $\lf=(q,\pi-\lambda)$, which is invertible because $q$ is prime to the conductor ($1$ or $2$).
+(c) is \cite[Thm.~2.7]{DG}, together with the description of the horizontal kernels in the proof of
+Lemma~\ref{lem:20vertical} (a line $C\subset S[2]$ gives a surface quotient iff it is $\omega$-stable).
+(d) Apply (a) with the odd primes first.  The composite of the odd steps has cyclic kernel of order $n_{\rm odd}$, equal to
+$E[\mathfrak a]$ for the product $\mathfrak a$ of the step ideals (kernels of composites of ideal isogenies are the products
+of the ideals, \cite[\S2.2]{CPV}), and $\mathfrak a$ is primitive because the kernel is cyclic.  The remaining steps are
+$2$-isogenies; they do not backtrack because the kernel is cyclic.
+\end{proof}
+
+%======================================================================
+\section{Odd trace: all families with both degrees odd (Stage 7b)}\label{sec:7b}
+
+Throughout this section $\ell$ is an odd prime and $D'$ is a distinct-vertex family of $\Res_\ell$ (Table in
+\texttt{logs/v7\_family\_table.txt}) with $t$ odd.  Write $t^2-4\ell^2=D'f^2$, $n_\pm$ for the non-cyclic parts and
+$e_\pm=(2\ell\pm t)/n_\pm^2$ for the reduced degrees (Proposition~\ref{prop:G3}).  Since $t$ and $f$ are odd,
+$D'\equiv t^2-4\ell^2\equiv5\pmod8$; $e_+,e_-$ are odd, coprime, and $e_+e_-=|D'|$ (because
+$e_+e_-n_+^2n_-^2=4\ell^2-t^2=|D'|f^2$ and $n_+n_-=f$, see Lemma~\ref{lem:oddalpha}).  $\mathcal O=\Z[\sqp]$,
+$\Cl=\Cl(\mathcal O)$, $H_\ell=\langle[\lf_\ell]\rangle$ (trivial if $\ell$ does not split).
+
+\begin{lemma}[\tagN, the twisting ideal]\label{lem:oddalpha}
+Let $\varphi:E_1\to E_2$ be a new $\ell$-isogeny of this family, $p>4\ell^4$, $j_1,j_2\notin\{0,1728\}$, and $\psi_\pm$ the
+cyclic parts of $\varphi\pm\varphi'$, so that $\psi_+:E_1\to E_2$ and $\tau\psi_-:E_1\to\tw E_2$ are $\Fp$-rational with
+kernels $E_1[\mathfrak a_+]$, $E_1[\mathfrak a_-]$ for primitive ideals of norms $e_+,e_-$ (Proposition~\ref{prop:factor}).
+Then $E_1,E_2$ are floor curves (if $p\equiv3\pmod 4$), $n_+n_-=f$, and
+\[\tw E_1=[\mathfrak a_+\mathfrak a_-]E_1,\qquad \tw E_2=[\bar{\mathfrak a}_+\mathfrak a_-]E_2 .\]
+The element $\alpha_0=\pm\widehat{\psi_+}\psi_-\in\End(E_1)$ satisfies $\alpha_0^2=D'$, anticommutes with $\pi$, and
+$\tau\alpha_0$ is an $\Fp$-rational cyclic $|D'|$-isogeny $E_1\to\tw E_1$ with kernel $E_1[\mathfrak a_+\mathfrak a_-]$.
+\end{lemma}
+\begin{proof}
+Floor: Lemma~\ref{lem:oddfloor}.  By Proposition~\ref{prop:G5}, $\Q(\theta)\cap\End(E_1)=\mathcal O_{D'}$, so
+$\theta=(t+f\alpha_0)/2$ with $\alpha_0=\pm\sqrt{D'}\in\mathcal O_{D'}$ (as $D'\equiv1\pmod4$, $(1+\alpha_0)/2\in\mathcal O_{D'}$).
+Since $\widehat{(\varphi+\varphi')}(\varphi-\varphi')=\widehat\theta-\theta=-f\alpha_0$ and
+$\varphi\pm\varphi'=\psi_\pm[n_\pm]$, we get $n_+n_-\,\widehat{\psi_+}\psi_-=-f\alpha_0$.  Comparing degrees,
+$n_+^2n_-^2e_+e_-=f^2|D'|$; $\alpha_0$ is primitive in $\End(E_1)$ (i.e.\ $\alpha_0/m\notin\End(E_1)$ for $m>1$, since
+$\Q(\theta)\cap\End(E_1)=\mathcal O_{D'}$ and $\sqrt{D'}/m\notin\mathcal O_{D'}$ for odd $D'$), and $\widehat{\psi_+}\psi_-$ is
+primitive (its kernel $\psi_-^{-1}(\ker\widehat{\psi_+})$ contains no $E_1[m]$, as $\psi_\pm$ are cyclic of coprime degrees
+$e_\pm$).  So $n_+n_-=f$ and $\alpha_0=\pm\widehat{\psi_+}\psi_-$.  $\pi\alpha_0=-\alpha_0\pi$ by Proposition~\ref{prop:G2}.
+Twisting: $\tau\alpha_0=\pm\,\tw(\widehat{\psi_+})\circ(\tau\psi_-)$, where $\tw(\widehat{\psi_+})=\tau\widehat{\psi_+}\tau^{-1}:\tw E_2\to\tw E_1$
+is $\Fp$-rational.  The dual of $E_1\to E_1/E_1[\mathfrak a_+]$ has kernel $E_2[\bar{\mathfrak a}_+]$; conjugating by $\tau$ replaces
+$\pi$ by $-\pi$, i.e.\ each $(q,\pi-\lambda)$ by $(q,\pi+\lambda)$, so $\tw(\widehat{\psi_+})$ has kernel $\tw E_2[\mathfrak a_+]$.
+Hence $\ker\tau\alpha_0=E_1[\mathfrak a_+\mathfrak a_-]$ and $\tw E_1=[\mathfrak a_+\mathfrak a_-]E_1$.  Finally
+$\tw E_2=[\mathfrak a_-]E_1$ and $E_2=[\mathfrak a_+]E_1$ give $\tw E_2=[\mathfrak a_-][\mathfrak a_+]^{-1}E_2=[\bar{\mathfrak a}_+\mathfrak a_-]E_2$.
+\end{proof}
+
+\begin{lemma}[\tagN, the converse: every twisting ideal carries a bridge]\label{lem:oddconv}
+Let $p\equiv3\pmod4$, $p>\max(4\ell^4,|D'|)$, and let $\mathfrak c$ be a primitive ideal of $\mathcal O$ of norm $|D'|$.  Put
+$E_{\mathfrak c}=[a]E_0$ with $E_0:y^2=x^3+x$ and $a^2=[\mathfrak c]^{-1}$ (unique, $h$ odd).  Then $\tw E_{\mathfrak c}=[\mathfrak c]E_{\mathfrak c}$,
+and $E_{\mathfrak c}$ has an endomorphism $\theta$ of trace $t$ and norm $\ell^2$ with $\theta^{(p)}=t-\theta$.  Consequently
+$E_{\mathfrak c}$ has a new $\ell$-isogeny, with kernel $\ker\theta\cap E_{\mathfrak c}[\ell]$, to a curve $M$ with $j(M)\in\Fp$.
+\end{lemma}
+\begin{proof}
+$\tw E_{\mathfrak c}=[a]^{-1}E_0=[a]^{-2}[a]E_0=[\mathfrak c]E_{\mathfrak c}$ (Lemma~\ref{lem:twist}(b),(c)).  The rational isogeny
+$E_{\mathfrak c}\to\tw E_{\mathfrak c}$ with kernel $E_{\mathfrak c}[\mathfrak c]$ is cyclic of degree $|D'|$; composing with $\tau^{-1}$
+gives $\alpha_0\in\End(E_{\mathfrak c})$ with $\pi\alpha_0=-\alpha_0\pi$ (\cite[Lemma~13]{CPV}; \cite[Thm.~3.10]{AMPV}), so
+$\tr\alpha_0=0$ and $\alpha_0^2=D'$.  $E_{\mathfrak c}$ is on the floor, so $\pi$ acts on $E[2]\cong\F_2^2$ as a transvection
+(exactly one rational point of order $2$), whose centraliser in $\mathrm{GL}_2(\F_2)$ is $\{1,\pi\}$.  $\alpha_0$ has odd degree and
+commutes with $\pi$ modulo $2$, so $\alpha_0|_{E[2]}\in\{1,\pi|_{E[2]}\}$.  If $\alpha_0\equiv\pi$ on $E[2]$, then
+$(\alpha_0-\pi)/2\in\End(E)$ \cite[Cor.~III.4.11]{Silverman}; but $\alpha_0\pi$ has square $-\alpha_0^2\pi^2=D'p<0$ and hence trace $0$,
+so $\deg(\alpha_0-\pi)=|D'|+p\equiv3+3\equiv2\pmod 4$ ($|D'|\equiv3\pmod8$), and $(\alpha_0-\pi)/2$ would have non-integral
+degree.  So $\alpha_0\equiv1$ on $E[2]$, $(1+\alpha_0)/2\in\End(E)$, and $\theta:=(t+f\alpha_0)/2\in\End(E)$ ($t,f$ odd).  It has
+trace $t$, norm $(t^2+f^2|D'|)/4=\ell^2$, and $\theta^{(p)}=(t-f\alpha_0)/2=t-\theta$.
+$\theta/\ell\notin\End(E)$ (its trace $t/\ell\notin\Z$; $\ell\nmid t$ because $\ell\mid t$ would force $D'=-3$), so $\ker\theta$ is cyclic of
+order $\ell^2$.  Let $C=\ker\theta\cap E[\ell]$, $\varphi:E\to M=E/C$, $\theta=\chi\varphi$.  Then $\pi(C)=\ker\theta^{(p)}\cap
+E[\ell]=\ker\widehat\theta\cap E[\ell]=\ker\widehat\chi$, so $M^{(p)}\cong E/\pi(C)\cong M$ and $j(M)\in\Fp$; and $\pi(C)\neq C$,
+since otherwise $t=\theta+\widehat\theta$ would kill $C$.
+\end{proof}
+
+\begin{theorem}[\tagN, Theorem A$_{\rm odd}$]\label{thm:Aodd}
+Let $\ell$ be an odd prime, $D'$ a distinct-vertex family of $\Res_\ell$ with $t$ odd, $e_\pm$ as above, and
+$p\equiv3\pmod4$ with $p>P_0:=\max\bigl(4\ell^4,\ (|D'|/q_0)^2\bigr)$, where $q_0$ is the smallest prime factor of $|D'|$
+(and $P_0=4\ell^4$ if $|D'|$ is a prime power), and with no root of $H_{D'}$ equal to $0$ or $1728$ mod $p$.  Then:
+\begin{enumerate}[label=(\alph*)]
+\item \emph{(bridges)} The new $\ell$-edges between $\Fp$-roots of $H_{D'}$ are in bijection with the pairs
+  $(\{\mathfrak a,\bar{\mathfrak a}\},\{\mathfrak b,\bar{\mathfrak b}\})$ of primitive ideals of $\Z[\sqp]$ of norms $e_+$ and $e_-$.
+  The bridge $B(\mathfrak a,\mathfrak b)$ joins $E_{\mathfrak a\mathfrak b}$ and $E_{\bar{\mathfrak a}\mathfrak b}$ (notation of
+  Lemma~\ref{lem:oddconv}).  In particular there are $2^{\omega(e_+)+\omega(e_-)-2}$ bridges if every prime divisor of $|D'|$ splits
+  in $\Q(\sqp)$, and none otherwise.
+\item \emph{(attachment)} $B(\mathfrak a,\mathfrak b)$ is attaching (in $\Sp^\circ_\ell$, with the $1728$ gluing) iff
+  $[\mathfrak a]\notin H_\ell$ and $[\mathfrak b]\notin H_\ell$.
+\item \emph{(length)} If not attaching, $d(j_1,j_2)=\min\{\|x\|:\ [\mathfrak a]\text{ or }[\mathfrak b]=[\lf_\ell]^x\}$, and
+  $N\ell^{d}\ge p$ for the corresponding norm $N\in\{e_+,e_-\}$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(b) For a bridge with sums $\psi_\pm$ and kernel ideals $\mathfrak a_\pm$: both endpoints are floor curves, $E_2=[\mathfrak a_+]E_1$
+and $\tw E_2=[\mathfrak a_-]E_1$ (Lemma~\ref{lem:oddalpha}), so by Lemma~\ref{lem:odd-comp} (which uses only that $\ell$ is odd) the
+edge is not attaching iff $E_2\in H_\ell E_1\cup H_\ell\tw E_1$ iff $[\mathfrak a_+]\in H_\ell$ or $[\mathfrak a_-]\in H_\ell$ (freeness,
+and $H_\ell$ is a group).  (c) As in Corollary~\ref{thm:C3}: the distance is $\min(\|x_+\|,\|x_-\|)$ over the members of $H_\ell$;
+$\mathfrak a\,\lf_\ell'^{\,m}$ (for the appropriate prime $\lf_\ell'$ above $\ell$) is primitive (the two factors involve different primes) and principal, so it is generated by some $u+v\sqp$ with $v\neq0$, and $N\ell^m=u^2+pv^2\ge p$.
+(a) \emph{From bridges to pairs.}  By Lemma~\ref{lem:oddalpha}, the endpoints have twisting classes $[\mathfrak a_+\mathfrak a_-]$
+and $[\bar{\mathfrak a}_+\mathfrak a_-]$, and $E_i=E_{\mathfrak c_i}$ by uniqueness of the square root.  \emph{Injectivity.}  If
+$[\mathfrak c]=[\mathfrak c']$ or $[\bar{\mathfrak c}']$ for primitive $\mathfrak c\ne\mathfrak c',\bar{\mathfrak c}'$ of norm $|D'|$, then
+$\mathfrak c\bar{\mathfrak c}'=m\,\mathfrak e$ (resp.\ $\mathfrak c\mathfrak c'=m\mathfrak e$) with $\mathfrak e$ primitive, principal and $\neq(1)$;
+$m$ is the product of the prime powers on which the two ideals agree (resp.\ disagree), so $m\ge q_0$ and
+$N\mathfrak e=(|D'|/m)^2$, and $\mathfrak e=(u+v\sqp)$ with $v\neq0$ gives $p\le(|D'|/q_0)^2$.  So distinct pairs
+$\{\mathfrak c,\bar{\mathfrak c}\}$ give distinct $j$-invariants.  \emph{Surjectivity.}  Given $(\mathfrak a,\mathfrak b)$, Lemma~\ref{lem:oddconv}
+gives a new $\ell$-edge from $E_{\mathfrak a\mathfrak b}$ to some $M$ with $j(M)\in\Fp$; by Proposition~\ref{prop:G5} $j(E_{\mathfrak a\mathfrak b})$ is
+a root of $H_{D'}$ (the optimal order of $\theta$ is $\mathcal O_{D'}$ because $\alpha_0$ is primitive), and by the forward direction
+applied to this edge, its twisting ideal $\mathfrak a_+\mathfrak a_-$ equals $\mathfrak a\mathfrak b$ or its conjugate (injectivity), with
+$N\mathfrak a_\pm=e_\pm$ coprime, so $\{\mathfrak a_+,\mathfrak a_-\}$ is $\{\mathfrak a,\mathfrak b\}$ up to simultaneous conjugation, and
+$M=E_{\bar{\mathfrak a}\mathfrak b}$ up to twist.  Each root carries exactly one bridge of this family: the two kernels
+$C,\pi(C)$ of Lemma~\ref{lem:oddconv} give the double edge, and $-\theta$, $\widehat\theta$ give the same kernels.  Counting:
+primitive ideals of norm $q^k$ ($q$ split) are $\lf_q^k,\bar\lf_q^k$.
+\end{proof}
+
+\begin{remark}
+For prime degrees ($e_\pm$ prime) there is one bridge and Theorem~\ref{thm:Aodd} reduces to Theorem~\ref{thm:Agen} (and to
+Theorem~\ref{thm:A3} for $\ell=3$); for $h(D')>2$ it also answers Stage~7d for odd $t$: the $h(D')$ roots of $H_{D'}$ that lie in
+$\Fp$ are paired by $\mathfrak a\mathfrak b\leftrightarrow\bar{\mathfrak a}\mathfrak b$.  The case $p\equiv1\pmod4$ is treated in
+Remark~\ref{rem:Aodd1mod4}.
+\end{remark}
+
+\begin{remark}[$p\equiv1\pmod4$]\label{rem:Aodd1mod4}
+Lemma~\ref{lem:oddalpha} and Theorem~\ref{thm:Aodd}(b),(c) hold verbatim for $p\equiv1\pmod4$ (there is one level, so
+Lemma~\ref{lem:odd-comp} applies without the gluing).  The bridge enumeration (a) needs more care, because $\Cl$ has even order.
+The curves $E$ with $\tw E=[\mathfrak c]E$ exist only when $[\mathfrak c]$ lies in one fixed coset of $\Cl^2$ (this coset is the same
+for all primitive $\mathfrak c$ of norm $|D'|$, by genus theory), and then they come in pairs $\{E,[\mathfrak t]E\}$.
+\textsc{Conjecture A$_{\rm odd}'$} (tested in Stage 7b): for $p\equiv1\pmod4$, $p>P_0$, exactly one curve of each such pair carries the
+bridge, so the list of bridges and their attachment is as in Theorem~\ref{thm:Aodd}(a),(b) whenever bridges exist.  (Compare
+Proposition~\ref{prop:h140}: for $D'=-35$ the other curve is a root of $H_{-140}$.)
+\end{remark}
+
+%======================================================================
+\section{Even trace: volcano moves (Stage 7c)}\label{sec:7c}
+
+For a surface curve $S$ ($p\equiv3\pmod4$) write $\omega=(1+\pi_S)/2$.  Recall from the proof of Lemma~\ref{lem:20vertical}:
+for a line $L\subset S[2]$, $S/L$ is on the surface iff $\omega L\subseteq L$; and if $\sigma\in\End(S)$ anticommutes with $\pi$
+then $\sigma\omega=(1-\omega)\sigma$.
+
+\begin{proposition}[\tagN, walk shape from a surface curve]\label{prop:walk}
+Let $p\equiv3\pmod4$, $S$ a surface curve, and $\gamma\in\End(S)$ with $\gamma^{(p)}=\widehat\gamma$; put $T=\tr\gamma$.  Let
+$\chi$ be an $\Fp$-rational cyclic isogeny from $S$ whose kernel's $2$-primary part is $C=\ker\gamma\cap S[2^\infty]$, of order
+$2^c$.  Let $\nu=v_2(T)-1$ if $T\ne0$ ($\nu=\infty$ if $T=0$).  Then the $2$-power part of $\chi$ (Proposition~\ref{prop:factor}) is a walk
+whose first $h=\min(c,\max(\nu,0))$ steps are horizontal, all in the same direction $\p_2$ or $\bar\p_2$ (so $p\equiv7\pmod8$ if $h>0$), and:
+if $c>h$ then $c=h+1$ and the last step descends.
+\end{proposition}
+\begin{proof}
+$\sigma:=\gamma-\widehat\gamma$ anticommutes with $\pi$ (it is Frobenius-anti-invariant) and $2\gamma=T+\sigma$.  For $Q\in C$
+(so $\gamma Q=0$, $\sigma Q=-TQ$):
+\[2\gamma(\omega Q)=T\omega Q+\sigma\omega Q=T\omega Q+(1-\omega)\sigma Q=T\omega Q-T(1-\omega)Q=T(2\omega-1)Q=T\pi Q.\]
+Let $Q$ generate $C[2^k]$ ($k\ge1$).  If $T$ is odd, $2\gamma(\omega Q)=T\pi Q\neq0$ ($\pi$ is invertible on $S[2^\infty]$), so
+$\omega Q\notin C$.  If $T$ is even, put $u=T/2\in\Z$ and $s=\gamma-u\in\End(S)$; then $s^{(p)}=\widehat\gamma-u=u-\gamma=-s$, and the same
+computation with $\gamma=u+s$ gives exactly $\gamma(\omega Q)=u\pi Q$.  So $\omega Q\in\ker\gamma\cap S[2^\infty]=C$ iff $uQ=0$ iff $k\le v_2(u)=\nu$.
+Hence $C[2^k]$ is $\omega$-stable iff $k\le\max(\nu,0)$ (for $T$ odd: iff $k=0$; for $T=0$: always).  By induction on $k$, $\omega$ descends along the first $k$ steps as long as they are
+horizontal, and step $k+1$ is horizontal iff $C[2^{k+1}]$ is $\omega$-stable (as in Lemma~\ref{lem:20vertical}).  Horizontal steps of a
+cyclic walk keep their direction, since $\p_2$ followed by $\bar\p_2$ has kernel $S[2]$.  After a descent the walk is at a floor curve,
+whose only rational $2$-isogeny is the ascent just made (for $p\equiv7\pmod8$) or goes to the same parent (for $p\equiv3\pmod8$
+every floor curve has one parent), so a cyclic walk stops there.  For $p\equiv3\pmod8$ no line is $\omega$-stable, so $h=0$.
+\end{proof}
+
+\begin{theorem}[\tagN, Theorem A$_{32}$: Conjecture~\ref{conj:32} holds]\label{thm:A32}
+Let $\ell=3$, $D'=-32$, $p\equiv7\pmod8$, $p>288$.  Then all of Conjecture~\ref{conj:32} holds:
+\begin{enumerate}[label=(\alph*)]
+\item one endpoint is a floor vertex and the other a surface vertex; from the surface endpoint the degree-$4$ and degree-$8$ maps are
+  the walks S--S--F and S--S--S--F (from the floor endpoint F--S--S and F--S--S--S), all horizontal steps in the same direction;
+\item the edge is not attaching iff $p\equiv2\pmod3$ and $[\p_2]\in H_3$ in $\Cl(\OK)$;
+\item if not attaching, $d(j_1,j_2)=\|3e/2\|_o+\|e/2\|_o$ where $[\p_2]=[\lf_3]^e$, $o=|H_3|$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+\emph{Transfer.}  The proof of Lemma~\ref{lem:35cm} and Proposition~\ref{prop:35struct}(a),(b),(d) transfers with $\mathcal O_{-32}=\Z[2\sqrt{-2}]$
+(Lemma~\ref{lem:cmC} is stated for any order): $\omega_{32}=1+2\sqrt{-2}$ has norm $9$ and trace $2$; $\p=(3,\omega_{32})$ is invertible
+($3\nmid$ conductor), $\p^2=(\omega_{32})$, $\p$ is not principal ($x^2+8y^2\ne3$), $h(-32)=2$.  Idempotent: $\beta^2-2\beta+9\equiv\beta(\beta+1)
+\pmod 3$, and $\beta/3$, $(\beta+1)/3$ have non-integral traces.  If $\Q(\theta)\ne\Q(\beta)$, Lemma~\ref{lem:kaneko} gives $4p\le32\cdot36$, i.e.\
+$p\le288$; otherwise $t^2-36=-32f^2$ forces $t=\pm2$, $f=1$.  Also $\Q(\theta)\cap\End(E_1)=\mathcal O_{-32}$ (not $\mathcal O_{-8}$): otherwise
+$j_1$ would be a common root of $H_{-32}$ and $H_{-8}$ mod $p$, but $\Res(H_{-32},H_{-8})=-2^65^67^413^2$ \tagX.  Replacing $\theta$ by $-\theta$ if
+necessary, $t=2$, $\theta=1+s$ with $s\in\End(E_1)$, $s^2=-8$, $s$ anticommuting with $\pi$, and $s/2=\pm\sqrt{-2}\notin\End(E_1)$.
+
+\emph{(a)}  Suppose $E_1=S$ is on the surface.  The sums satisfy $\widehat\varphi(\varphi+\varphi')=3+\theta=4+s$ (trace $8$) and
+$\widehat\varphi(\varphi-\varphi')=2-s$ (trace $4$), with cyclic kernels of $2$-parts of orders $8$ and $4$ ($24=8\cdot3$, $12=4\cdot3$; cyclic by
+Proposition~\ref{prop:G3}, as $(3\pm\theta)/2\notin\End$).  Proposition~\ref{prop:walk}: for $4+s$, $\nu=2$, $c=3$: two horizontal steps and a descent;
+for $2-s$, $\nu=1$, $c=2$: one horizontal step and a descent.  So $E_2$ is on the floor.  If $E_1$ is on the floor, apply this to the
+dual edge $\widehat\varphi:E_2\to E_1$ when $E_2$ is on the surface; and $E_2$ cannot also be on the floor, since a cyclic $4$-walk from a
+floor vertex for $p\equiv7\pmod8$ is F--S--S (the ascent, then a horizontal step, because the only floor neighbour of the parent is the
+start).  The directions agree: all these walks start with the line $L_s=\ker s\cap S[2]$ ($s|_{S[2]}\ne0$ since $s/2\notin\End$, and
+$s^2\equiv0$, so $s|_{S[2]}$ has rank one with kernel $L_s$; for $Q\in\ker(4+s)$ or $\ker(2-s)$ of order $2$, $sQ=\mp4Q=0$ or $2Q=0$).
+
+\emph{Twisting class of $S$.}  $\tau s:S\to\tw S$ is rational, cyclic of degree $8$ (Lemma~\ref{lem:twist}(d)); by Proposition~\ref{prop:walk}
+with $\gamma=s$ ($T=0$, $\nu=\infty$) all three steps are horizontal, in the direction of $L_s$.  So $\tw S=[\p]^3S$, where
+$\p\in\{\p_2,\bar\p_2\}$ is the prime with $S[\p]=L_s$.
+
+\emph{(b), (c).}  Let $F\in\{E_2,\tw E_2\}$ be the end of the degree-$4$ walk; $\sigma(F)=[\p]S$.  By Lemma~\ref{lem:basic}(f) and the proof
+of Lemma~\ref{lem:parent} (which uses only $p\equiv7\pmod8$), $\sigma$ is a bijection from floor to surface classes with
+$\sigma([\lf_3]X)=[\lf_3\OK]\sigma(X)$, $\sigma(\tw X)=\tw\sigma(X)$ (Lemma~\ref{lem:parenttwist}), and $\sigma(E_0^f)=E_0^s$ for the two
+$j=1728$ curves.  Write $S=[b]E_0^s$; by \cite[Lemma~16]{CPV}, $b^2=[\p]^{-3}$.  By Proposition~\ref{prop:Gsplit}(b) (the endpoints lie on
+different levels) the edge is not attaching iff $S\in H_3E_0^s$ and $F\in H_3E_0^f$, i.e.\ iff $b\in H_3$ and $[\p]b\in H_3$, i.e.\ (odd order)
+iff $[\p]\in H_3$.  If $p\equiv1\pmod3$, $H_3=1$ and $\p_2$ is not principal ($(u^2+pv^2)/4=2$ forces $p\le7$).  For (c): with $[\p]=[\lf_3]^{\pm e}$,
+$S=[\lf_3]^{x_S}E_0^s$ and $\sigma(F)=[\lf_3]^{x_F}E_0^s$ where $2x_S\equiv\mp3e$ and $x_F=x_S\pm e$, so $2x_F\equiv\mp e$.  A shortest path
+passes through $1728$, and the two level distances are $\|x_S\|$ and $\|x_F\|$ (Lemma~\ref{lem:odd-comp}(b) on each level, transported by $\sigma$
+on the floor).
+\end{proof}
+
+\noindent\emph{Evidence already on record} \tagX: $2{,}396/2{,}396$ primes $31<p<10^5$ and the sealed test $17{,}270/17{,}270$ ($10^5<p<10^6$).  For
+$31<p\le288$ the statement is \emph{computed}, not proved.
+
+\begin{theorem}[\tagN, per-bridge criterion via surface shadows, $p\equiv7\pmod8$]\label{thm:shadow}
+Let $\ell$ be an odd prime, $p\equiv7\pmod8$, $p>4\ell^4$, and $j_1j_2$ a new $\ell$-edge (any family, $j_i\notin\{0,1728\}$).  Let $\psi_+:E_1\to E_2$
+and $\tau\psi_-:E_1\to\tw E_2$ be the rational cyclic parts of $\varphi\pm\varphi'$ (Proposition~\ref{prop:G3}).  By
+Proposition~\ref{prop:factor} each is an odd ideal $\mathfrak a_\pm$ followed by a $2$-walk with $h_\pm$ horizontal steps in a direction
+$\p_\pm\in\{\p_2,\bar\p_2\}$; put $g_\pm=[\mathfrak a_\pm\OK][\p_\pm]^{h_\pm}\in\Cl(\OK)$ (the \emph{shadow classes}).  Then
+$\sigma(E_2)=g_+\sigma(E_1)$ and $\tw\sigma(E_2)=g_-\sigma(E_1)$, and
+\begin{enumerate}[label=(\alph*)]
+\item if $E_1,E_2$ lie on the same level, the edge is not attaching iff $g_+\in H_\ell$ or $g_-\in H_\ell$;
+\item if they lie on different levels, the edge is not attaching iff $g_+\in H_\ell$ and $g_-\in H_\ell$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+Shadows: odd steps commute with $\sigma$ (Lemma~\ref{lem:parent}); an ascent $F\to\sigma(F)$ or a descent $S\to F$ with $\sigma(F)=S$ does not change the
+shadow; a horizontal step multiplies it by $[\p_\pm]$.  Twisting commutes with $\sigma$.  (a) Components on each level are $H_\ell$-orbits of
+horizontal odd isogenies, closed under $\tw$; via the bijection $\sigma$ the floor components correspond to the surface ones, and $1728$ is irrelevant
+because both endpoints are on one level and a shortest path between them does not leave the level (Lemma~\ref{lem:odd-comp}(b)).  So the edge is not
+attaching iff $\sigma(E_2)\in H_\ell\sigma(E_1)\cup H_\ell\tw\sigma(E_1)$ iff $g_+\in H_\ell$ or $g_-\in H_\ell$.  (b) Write $\sigma(E_i)=[b_i]E_0^s$.  Then
+$b_2=g_+b_1$ and $b_2^{-1}=g_-b_1$, so $b_1^2=(g_+g_-)^{-1}$.  By Proposition~\ref{prop:Gsplit}(a) (transported to the floor by $\sigma$) the edge is not
+attaching iff $b_1,b_2\in H_\ell$ iff $b_1\in H_\ell$ and $g_+\in H_\ell$ iff $g_+g_-\in H_\ell$ and $g_+\in H_\ell$ (odd order) iff $g_\pm\in H_\ell$.
+\end{proof}
+
+\begin{remark}[consistency checks]
+For $t$ odd all $h_\pm=0$ and both endpoints are floor curves, so Theorem~\ref{thm:shadow}(a) is Theorem~\ref{thm:Aodd}(b) (for $p\equiv7\pmod8$).  For
+$D'=-20$ ($\ell=3$): $g_-=1$ (the degree-$2$ map is vertical) and $g_+=[\lf_5]$, so (b) gives Theorem~\ref{thm:A20} for $p\equiv7\pmod8$.  For
+$D'=-32$: $g_\pm=[\p]^{2},[\p]$, so (b) gives Theorem~\ref{thm:A32}(b).
+\end{remark}

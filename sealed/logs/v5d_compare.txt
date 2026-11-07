@@ -1,0 +1,19 @@
+v5d_compare.py run at 2026-09-29T17:08:48Z
+manifest SHA-256: 59621d26bc8a01b952f376026c7dc41f8963ec811deaf4d1a8ef6f76da685c7f -> OK
+  logs/v5d_predictions.csv OK
+  logs/v5d_fresh_primes.txt OK
+  v5d_predict.sage OK
+  v5d_select.py OK
+  logs/v5d_conjecture.txt OK
+Integrity check passed; predictions are read only after this line.
+
+== fresh primes 10^5 < p < 10^6: 17270
+   observed attaching 10138, non-attaching 7132 (p = 1 mod 3 among them: 0)
+   A32 mismatches: 0;  C32 k mismatches: 0
+   forced attachment predicted: 8712, not attaching among them: 0
+   L32 (one endpoint per level; no rational 2-isogeny to j2; unique deg-4 walk SSF/FSS; unique deg-8 walk SSSF/FSSS) failures: 0
+   o3 (= |H3| in Cl(O_K)) vs measured cycle lengths of both endpoints: 0 mismatches
+   partner root fails: 0;  not supersingular: 0
+   deg-4 walk shapes: {'w4_FSS': 8575, 'w4_SSF': 8695}
+
+TOTAL mismatches: 0

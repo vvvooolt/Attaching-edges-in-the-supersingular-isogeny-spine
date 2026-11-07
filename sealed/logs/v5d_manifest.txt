@@ -1,0 +1,6 @@
+Phase 5d prediction manifest (l = 3, D' = -32; Conjectures L32/A32/C32). Created 2026-09-29T12:35:20Z, before any verification on the fresh primes 10^5 < p < 10^6.
+402729f400809d36caa5661bf4de457ecdce25aa8ca894314b88ff9da18aa4b1  logs/v5d_predictions.csv
+e2234acc1f1ccd7477fd4c1c51e05fb3898d29b788a7e4c38bcab27de9429ced  logs/v5d_fresh_primes.txt
+8093523f29e7bb80784a3e2cfa8a7a615c4786625835a0eb8c37b9f0b256202b  v5d_predict.sage
+5418a48fc3f69e5ba14bfe31e8a3192db2fc674d2546a54d76763c537be2f0c7  v5d_select.py
+ac4a4baa0ea4d11f4435802e488b83ac227130b106a435b644476427f2e9ceb3  logs/v5d_conjecture.txt

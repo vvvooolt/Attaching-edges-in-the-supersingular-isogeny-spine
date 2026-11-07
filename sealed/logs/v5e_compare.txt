@@ -1,0 +1,21 @@
+v5e_compare.py run at 2026-09-29T17:08:48Z
+manifest SHA-256: a0f61e247318317000a6cebce896137cf8f553cd7310b5e48ba93e8d18e22d52 -> OK
+  logs/v5e_oos_pred_5_51.csv OK
+  logs/v5e_oos_pred_5_91.csv OK
+  logs/v5e_oos_pred_7_115.csv OK
+  logs/v5e_oos_pred_7_187.csv OK
+  logs/v5e_oos_primes_5_51.txt OK
+  logs/v5e_oos_primes_5_91.txt OK
+  logs/v5e_oos_primes_7_115.txt OK
+  logs/v5e_oos_primes_7_187.txt OK
+  v5e_predict.sage OK
+  v5e_select.sage OK
+  logs/v5e_theory_sec15.tex OK
+Integrity check passed; predictions are read only after this line.
+
+== l=5 D=-51: 50 primes computed (0 missing), non-attaching 17, mismatches 0
+== l=5 D=-91: 50 primes computed (0 missing), non-attaching 15, mismatches 0
+== l=7 D=-115: 50 primes computed (0 missing), non-attaching 24, mismatches 0
+== l=7 D=-187: 50 primes computed (0 missing), non-attaching 18, mismatches 0
+
+TOTAL mismatches (incl. missing primes): 0

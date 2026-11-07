@@ -1,0 +1,26 @@
+Phase 5d CONJECTURE (l = 3, D' = -32), formulated 2026-09-29 from exploratory data on the 2,396 family
+primes 31 < p < 10^5 (logs/v5d_explore.csv, logs/v5d_rule_test.sage), with a heuristic derivation;
+NOT proved.  Family: roots j1 != j2 of H_-32 = X^2 - 52250000 X + 12167000000 in F_p, supersingular:
+p = 7 (mod 8).  K = Q(sqrt(-p)), O_K = Z[(1+sqrt(-p))/2], Cl = Cl(O_K) (odd order h(-p)), p2 = a prime
+of O_K above 2, l3 = a prime above 3 (split iff p = 2 mod 3), H3 = <[l3]> (trivial if p = 1 mod 3).
+
+Conjecture L32 (levels/shape).  For p > 31 in the family: one of j1, j2 is a floor vertex and the other
+a surface vertex; the F_p-rational maps of degrees 4 and 8 from the sum trick are the unique cyclic
+rational 2-power walks from E1 to {E2, twist E2} of lengths 2 and 3, of level shape S-S-F / F-S-S
+(length 2) and S-S-S-F / F-S-S-S (length 3); there is no rational 2-isogeny from E1 to a model of j2.
+
+Conjecture A32 (attachment, with the 1728 gluing).  For p > 31 in the family, the new edge j1 j2 is
+NOT attaching iff  p = 2 (mod 3)  and  [p2] in <[l3]>  in Cl(O_K).
+
+Conjecture C32 (length).  If not attaching, write [p2] = [l3]^e, o = |H3| (odd), ||x|| = distance of x
+to 0 in Z/o, and x/2 = x*(o+1)/2 mod o.  Then d(j1, j2) in the spine without new 3-edges (with the
+1728 gluing) equals ||3e/2|| + ||e/2||.
+(Consequence of A32 and the norm bound: if not attaching, 8 * 3^||e|| >= p + 1; so the edge attaches
+whenever 8 * 3^floor(o/2) < p + 1.)
+
+Heuristic derivation (not a proof): alpha = 2 theta - t = +-4 sqrt(-2) is a twisting endomorphism;
+s = alpha/2 = +-2 sqrt(-2) has degree 8, is cyclic (sqrt(-2) not in End since D' = -32 is the discriminant
+of Q(theta) cap End(E1)), and tau s : E1 -> twist E1 is F_p-rational.  If on the surface endpoint S it acts
+as [p2]^(+-3) (three horizontal steps) then CPV Lemma 16 with the self-twist base y^2 = x^3 - x gives
+b^2 = [p2]^(-+3) for S = [b]E0s; the floor endpoint F has parent sigma(F) = [p2]^(+-1) S; F is in the
+1728-component iff sigma(F) is (y^2 = x^3 + x has parent y^2 = x^3 - 4x, j = 1728, on the surface).

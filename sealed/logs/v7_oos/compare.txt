@@ -1,0 +1,29 @@
+v7_oos_compare.py run at 2026-09-29T21:43:01Z
+manifest SHA-256: 11244083c97544e93f7a737cc16e7ec391fc486d43496d6894f565f16fd273ec -> OK
+  28 listed files re-hashed: all OK
+Integrity check passed; predictions are read only after this line.
+
+== predictor: general (A_all / A_1mod4)
+   l=3  p=1mod4   rows    57  bridges     4 (attaching     2)  mismatching rows 0
+   l=3  p=3mod4   rows    63  bridges    19 (attaching     8)  mismatching rows 0
+   l=5  p=1mod4   rows   144  bridges    22 (attaching    10)  mismatching rows 0
+   l=5  p=3mod4   rows   176  bridges    48 (attaching    26)  mismatching rows 0
+   l=7  p=1mod4   rows   308  bridges    38 (attaching    29)  mismatching rows 0
+   l=7  p=3mod4   rows   252  bridges    95 (attaching    61)  mismatching rows 0
+   l=11 p=1mod4   rows   486  bridges    61 (attaching    28)  mismatching rows 0
+   l=11 p=3mod4   rows   594  bridges   209 (attaching   163)  mismatching rows 0
+   l=13 p=1mod4   rows   561  bridges    61 (attaching    38)  mismatching rows 0
+   l=13 p=3mod4   rows   759  bridges   240 (attaching   192)  mismatching rows 0
+== predictor: A_odd
+   l=3  p=1mod4   rows    19  bridges     4 (attaching     2)  mismatching rows 0
+   l=3  p=3mod4   rows    21  bridges     3 (attaching     0)  mismatching rows 0
+   l=5  p=1mod4   rows    54  bridges    15 (attaching     6)  mismatching rows 0
+   l=5  p=3mod4   rows    66  bridges    12 (attaching     7)  mismatching rows 0
+   l=7  p=1mod4   rows   110  bridges    30 (attaching    24)  mismatching rows 0
+   l=7  p=3mod4   rows    90  bridges    18 (attaching    13)  mismatching rows 0
+   l=11 p=1mod4   rows   180  bridges    50 (attaching    23)  mismatching rows 0
+   l=11 p=3mod4   rows   220  bridges    43 (attaching    31)  mismatching rows 0
+   l=13 p=1mod4   rows   221  bridges    48 (attaching    29)  mismatching rows 0
+   l=13 p=3mod4   rows   299  bridges    80 (attaching    64)  mismatching rows 0
+
+TOTAL mismatching rows (both predictors): 0

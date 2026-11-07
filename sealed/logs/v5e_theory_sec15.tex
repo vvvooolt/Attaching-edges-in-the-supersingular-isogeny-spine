@@ -1,0 +1,117 @@
+%======================================================================
+\section{\texorpdfstring{$\ell=3$}{l=3}, the family \texorpdfstring{$D'=-32$}{D'=-32} (Phase 5d): conjectures}\label{sec:l3m32}
+
+Here $H_{-32}=X^2-52250000X+12167000000$.  Its roots are supersingular and lie in $\Fp$ iff $p\equiv7\pmod8$, $p\neq7$
+\tagX{} ($\mathrm{disc}=2^95^67^413^229^2$, root field $\Q(\sqrt2)$, supersingular iff $(\frac{-2}p)=-1$).  So $p\equiv3\pmod4$, and
+$2$ splits in $\OK$.  By Proposition~\ref{prop:G1}, $t=\pm2$ and the sums have degrees $8$ and $4$, both cyclic.
+We write $\p_2$ for a prime of $\OK$ above $2$ and $H_3=\langle[\lf_3]\rangle\le\Cl(\OK)$.
+
+\emph{Status: CONJECTURE.}  The statements below were read off from exploratory data on all $2{,}396$ family primes
+$31<p<10^5$.  They were then sealed, together with class-group predictions for all $17{,}270$ family primes
+$10^5<p<10^6$, \emph{before} any verification in that range (\texttt{verify/logs/v5d\_manifest.txt}, SHA-256
+\texttt{59621d26\ldots5c7f}, OpenTimestamps).  Their verification status is in \texttt{REPORT.md}~\S14.
+
+\begin{conjecture}[L$_{32}$, A$_{32}$, C$_{32}$]\label{conj:32}
+Let $p>31$, $p\equiv7\pmod8$.
+\begin{enumerate}[label=(\alph*)]
+\item One of $j_1,j_2$ is a floor vertex and the other a surface vertex.  The degree-$4$ and degree-$8$ maps are rational
+  $2$-power walks of shapes S--S--F / F--S--S and S--S--S--F / F--S--S--S.
+\item The edge is not attaching iff $p\equiv2\pmod3$ and $[\p_2]\in H_3$.
+\item If not attaching, with $[\p_2]=[\lf_3]^e$ and $o=|H_3|$: $d_{\Sp^\circ_3}(j_1,j_2)=\|3e/2\|_o+\|e/2\|_o$.
+\end{enumerate}
+\end{conjecture}
+\noindent\emph{Heuristic.}  $\alpha=2\theta-t=\pm4\sqrt{-2}$, so $s=\alpha/2$ has degree $8$ and is cyclic
+($\sqrt{-2}\notin\End(E_1)$, since $D'=-32$ is the discriminant of $\Q(\theta)\cap\End(E_1)$), and $\tau s:E_1\to\tw E_1$ is
+$\Fp$-rational (Lemma~\ref{lem:twist}(d)).  Suppose that on the surface endpoint $S$ this map is three horizontal steps, i.e.\
+$\tw S=[\p_2]^{\pm3}S$, and that the floor endpoint $F$ satisfies $\sigma(F)=[\p_2]^{\pm1}S$ or its twist.  Then
+Proposition~\ref{prop:Gsplit}(b) below gives (b) and (c), because the parent of $y^2=x^3+x$ is $y^2=x^3-4x$ ($j=1728$).  The
+missing step is proving the shape of the degree-$8$ twisting map.
+
+%======================================================================
+\section{General \texorpdfstring{$\ell$}{l}: attachment theorems (Phase 5e)}\label{sec:Agen}
+
+\begin{proposition}[\tagN, level-changing edges and the $1728$ gluing]\label{prop:Gsplit}
+Let $\ell$ be an odd prime, $p\equiv3\pmod4$, and let $X$ be a supersingular curve over $\Fp$ on level
+$\mathcal O_X\in\{\Z[\sqp],\OK\}$.  Put $H_\ell(\mathcal O_X)=\langle[\lf_\ell]\rangle$ if $(\frac{-p}\ell)=1$ and $1$
+otherwise.  Let $[\mathfrak c_X]\in\Cl(\mathcal O_X)$ be the class with $\tw X=[\mathfrak c_X]X$ (it exists by
+Lemma~\ref{lem:basic}(e), since $\tw$ preserves levels).
+\begin{enumerate}[label=(\alph*)]
+\item $j(X)$ lies in the component of $1728$ in $\Sp^\circ_\ell$ iff $[\mathfrak c_X]\in H_\ell(\mathcal O_X)$.
+\item If $j_1,j_2$ are joined by a new $\ell$-edge and $E_1,E_2$ lie on \emph{different} levels, then the edge is not
+  attaching iff $[\mathfrak c_{E_1}]\in H_\ell(\mathcal O_{E_1})$ and $[\mathfrak c_{E_2}]\in H_\ell(\mathcal O_{E_2})$.
+\end{enumerate}
+In particular, a level change does \emph{not} by itself imply attachment.
+\end{proposition}
+\begin{proof}
+(a) Let $E_0$ be the $j=1728$ curve on the level of $X$ (self-twist, Lemma~\ref{lem:twist}(b)).  The component of
+$1728$ restricted to that level consists of the $j$-invariants of $H_\ell E_0$.  This uses odd degree: horizontal
+(\cite[Thm.~2.7(2)]{DG}), and components are $H_\ell$-orbits (\cite[Thm.~7]{CSIDH}); the twist-closure is automatic since
+$\tw(hE_0)=h^{-1}E_0$.  Write $X=[a]E_0$.  By \cite[Lemma~16]{CPV} with $[b]=1$, $a^2=[\mathfrak c_X]^{-1}$.  $\Cl(\mathcal
+O_X)$ has odd order \cite[Lemma~3]{CPV}, so $a\in H_\ell\iff a^2\in H_\ell$.  Finally, $j(X)\in j(H_\ell E_0)$ iff
+$X\in H_\ell E_0\cup\tw(H_\ell E_0)=H_\ell E_0$.
+(b) As in the proof of Theorem~\ref{thm:A20}: $1728$ is the only $j$-invariant on both levels, so the two
+endpoints are in the same component iff both components contain $1728$.  Now apply (a).
+\end{proof}
+
+For $D'=-20$ this is Theorem~\ref{thm:A20}, with $\mathfrak c=\lf_5$ from the degree-$5$ map $\tau s$.  For $D'=-32$,
+Conjecture~\ref{conj:32} amounts to $[\mathfrak c_S]=[\p_2]^{\pm3}$ and $[\mathfrak c_F]\mapsto[\p_2]^{\pm1}$.
+
+\begin{theorem}[\tagN, Theorem A$_{\rm gen}$: prime-degree families]\label{thm:Agen}
+Let $\ell$ be an odd prime and $D'<0$ a fundamental discriminant with $h(D')=2$.  Assume $D'=t_0^2-4\ell^2$ with
+$t_0>0$ odd and $\ell\nmid t_0$, that $|D'|>\ell^2$, that $(1-D')/4>\ell$, and that $n_\pm:=2\ell\pm t_0$ are both prime.  Let
+$p$ be a prime with
+\[p>\max\bigl(\ell^2|D'|,\ 4\ell^2\bigr),\qquad p\nmid D',\qquad j\notin\{0,1728\}\text{ for the roots of }H_{D'},\]
+such that $H_{D'}$ has two roots $j_1\neq j_2$ in $\Fp$ and both are supersingular.  Then $j_1j_2$ is a new $\ell$-edge (a double
+edge), both endpoints are floor curves, and the edge is attaching (in $\Sp^\circ_\ell$, with the $1728$ gluing) iff
+\[[\lf_{n_+}]\notin H_\ell\quad\text{and}\quad[\lf_{n_-}]\notin H_\ell\qquad\text{in }\Cl(\Z[\sqp]),\]
+where $H_\ell=\langle[\lf_\ell]\rangle$ if $(\frac{-p}\ell)=1$ and $H_\ell=1$ otherwise.  Moreover, if the edge is not attaching,
+$d(j_1,j_2)=\min\{\|e_q\|:[\lf_q]=[\lf_\ell]^{e_q}\in H_\ell,\ q\in\{n_+,n_-\}\}$ and $q\,\ell^{d}\ge p$ for the minimising $q$.
+\end{theorem}
+\begin{proof}
+We go through \S\ref{sec:l3m35} and record every place where $\ell=3$, $D'=-35$ entered.
+\begin{enumerate}[label=(\roman*)]
+\item \emph{CM construction} (Lemma~\ref{lem:35cm}).  Put $\omega=(t_0+\sqrt{D'})/2\in\mathcal O_{D'}$: it has norm
+  $(t_0^2-D')/4=\ell^2$ and trace $t_0$.  Since $D'\equiv t_0^2\not\equiv0\pmod\ell$, $\ell$ splits; $\omega$ lies in one
+  prime $\p$ above $\ell$ and not in $\ell\mathcal O_{D'}$ ($\omega/\ell$ has trace $t_0/\ell\notin\Z$), so $(\omega)=\p^2$.  $\p$ is
+  not principal, because the norm form $x^2+xy+\frac{1-D'}4y^2$ does not represent $\ell<\frac{1-D'}4$ (only $y=0$ could
+  work, and $\ell$ is not a square).  So $[\p]$ is the non-trivial class, and the two roots of $H_{D'}$ are $j(\mathcal O)$
+  and $j(\p^{-1})$.  The lattice argument of Lemma~\ref{lem:cm15} gives $\ell$-isogenies $\varphi,\psi:E_1\to E_2^\circ$ with
+  $\beta=\widehat\varphi\psi$, $\beta^2-t_0\beta+\ell^2=0$ (up to the sign of $\beta$).
+\item \emph{Newness} (Proposition~\ref{prop:35struct}(a)).  $\beta^2-t_0\beta+\ell^2\equiv\beta(\beta-t_0)\pmod\ell$, and
+  $\beta/\ell$, $(\beta-t_0)/\ell$ have traces $\pm t_0/\ell\notin\Z$.  So $\beta$ is a rank-one idempotent on $E_1[\ell]$ up to
+  a unit, and $\ker\beta\cap E_1[\ell]=C_2$.  \cite[Prop.~23]{BS} needs $p\ge4\ell^2$.  For $\beta'$: $\beta'=\beta$ would put
+  discriminant $D'$ into $\Endp(E_1)$, impossible for $p>|D'|$; $\beta'=t_0-\beta=\widehat\beta$ has kernel $C_1$; otherwise
+  Lemma~\ref{lem:kaneko} (same discriminant) gives $p\le|D'|$.
+\item \emph{$t=\pm t_0$ and partner root} (Proposition~\ref{prop:35struct}(b),(d)).  If $\Q(\theta)\neq\Q(\beta)$ then
+  $4p\le|D'|(4\ell^2-t^2)\le4\ell^2|D'|$.  Otherwise $t^2-4\ell^2=D'f^2$ with $f\ge1$, and $f^2\le4\ell^2/|D'|<4$ forces $f=1$,
+  $t=\pm t_0$.  $\mathcal O_{D'}$ is maximal, so $\theta\in\Z[\beta]$, and its elements of norm $\ell^2$ and trace $\pm t_0$ are
+  $\pm\beta,\pm\widehat\beta$ (the coefficient of $\sqrt{D'}$ is $\pm\frac12$ by the norm equation).
+\item \emph{Degrees and floor.}  $\deg(\varphi\pm\varphi')=n_\pm$ are prime, so the sums are cyclic
+  (Proposition~\ref{prop:G3}).  $t$ is odd, so both endpoints are on the floor (Lemma~\ref{lem:oddfloor}; one level if
+  $p\equiv1\pmod4$).
+\item \emph{Ideals} (Proposition~\ref{prop:35struct}(e)).  $n_\pm$ are odd primes different from $p$, so Frobenius has distinct
+  eigenvalues on $E_1[n_\pm]$.  The rational kernels are $E_1[\lf_{n_\pm}]$, and $E_2=[\lf_{n_+}]E_1$,
+  $\tw E_2=[\lf_{n_-}]E_1$ (or the reverse, depending on the sign of $t$; the criterion is symmetric).
+\item \emph{Components} (Lemma~\ref{lem:odd-comp}, Theorem~\ref{thm:A3}, Corollary~\ref{thm:C3}).  These use only that $\ell$
+  is odd: rational $\ell$-isogenies are horizontal, components of $G_\ell(\Fp)$ are $H_\ell$-orbits, and the $1728$ gluing adds only
+  surface vertices.  If $(\frac{-p}\ell)\neq1$, $G_\ell(\Fp)$ has no edges.  The bound: $\lf_q\lf_\ell'^{\,m}$ principal with
+  non-square norm $q\ell^m$ gives $q\ell^m\ge p$.
+\end{enumerate}
+\end{proof}
+
+\noindent The four prime-degree families with $\ell\le7$ satisfy all hypotheses \tagX:
+\begin{center}\small
+\begin{tabular}{@{}cccccc@{}}
+\toprule
+$\ell$ & $D'$ & $t_0$ & $(n_+,n_-)$ & $(1-D')/4$ & $p$ bound $\max(\ell^2|D'|,4\ell^2)$\\
+\midrule
+3 & $-35$ & 1 & $(7,5)$ & 9 & 315\\
+5 & $-51$ & 7 & $(17,3)$ & 13 & 1275\\
+5 & $-91$ & 3 & $(13,7)$ & 23 & 2275\\
+7 & $-115$ & 9 & $(23,5)$ & 29 & 5635\\
+7 & $-187$ & 3 & $(17,11)$ & 47 & 9163\\
+\bottomrule
+\end{tabular}
+\end{center}
+For $\ell=3$ the theorem is Theorem~\ref{thm:A3}.  The special $j$-values are excluded by the finitely many primes dividing
+$H_{D'}(0)H_{D'}(1728)$.

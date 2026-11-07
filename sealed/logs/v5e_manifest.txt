@@ -1,0 +1,12 @@
+Phase 5e prediction manifest (Theorem A_gen, prime-degree families l = 5, 7; out-of-sample 10^5 < p < 10^6). Created 2026-09-29T14:00:01Z, before any ground-truth computation on these primes.
+5349cd0a87be70723aad613083deb607b77c05ac8bc167529820fa296e3cba57  logs/v5e_oos_pred_5_51.csv
+5256f9694f32f6aad290dcfe95a1d7db77ce421706faf0e3f0f67f7c2f56d3be  logs/v5e_oos_pred_5_91.csv
+6421969507bcb8185839cdfbd8358eb737c357772bec77c6bf2faf8b5a50a0f0  logs/v5e_oos_pred_7_115.csv
+2760c9384719d26fd36bb1bf5e353d00a9bec4bcd5dd5280344f63311a3fbb9a  logs/v5e_oos_pred_7_187.csv
+ba78576ee036529ac3bb3ec427e818758c5537bc112c332c4f157886e650a583  logs/v5e_oos_primes_5_51.txt
+958d64876d0b8cb9fa5280f5232f00341b9b289f85a62e18d6046b69ba1b863a  logs/v5e_oos_primes_5_91.txt
+40eb583972398e36a7aa0e358fbcc36ba502f3cf5e94d6d408c6f3c0ec9a5a45  logs/v5e_oos_primes_7_115.txt
+51c10c491382967c24f40991a0e7490bfa8a31f07db06b03657ca05a478b4c76  logs/v5e_oos_primes_7_187.txt
+c68e725ced8e90fb2be45c6ecbd5f0816e06697f809817ffbbdb2505a62f8ab6  v5e_predict.sage
+e9be4f39d783e58d0533e04d08c0cc01287906acbffabc3a583caaa0094304bf  v5e_select.sage
+a1269703e8f34fb75fdf0597c0f6e88f1337381dbc3f88df53518c07998688b5  logs/v5e_theory_sec15.tex
